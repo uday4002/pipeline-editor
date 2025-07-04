@@ -31,7 +31,7 @@ An interactive Directed Acyclic Graph (DAG) Builder built with React and ReactFl
 ## Features
 
 -  Add/Remove/Connect nodes interactively
--  Undo/Redo and Auto Layout
+-  Auto Layout
 -  Real-time DAG Validation (Cycle detection, required structure check)
 -  **Export Pipeline as JSON** (click to download structure)
 -  JSON View panel for debugging
