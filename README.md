@@ -15,6 +15,7 @@ An interactive Directed Acyclic Graph (DAG) Builder built with React and ReactFl
 ### Valid DAG  ![Invalid-DAG](./screenshots/valid-dag.png)
 ### AutoLayout  ![AutoLayout](./screenshots/autolayout.png)
 ### JSON preview  ![JSON-preview](./screenshots/json-preview.png)
+### Lighthouse Performance  ![Lighthouse-Performance](./screenshots/lighthouse-performance.png)
 
 ---
 
