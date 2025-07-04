@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# DAG Builder (React + ReactFlow)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive Directed Acyclic Graph (DAG) Builder built with React and ReactFlow. Users can create nodes, connect them with edges, validate pipelines in real-time, and now export their DAG structure as a downloadable JSON file.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+ **Live Demo**  [Live Demo](https://pipeline-editor-omega.vercel.app/)  
+ **Video Demo**  [Video Demo]()  
+ 
+### Main Screen  ![Main Screen](./screenshots/main-screen.png)
+### Add Node  ![Add Node](./screenshots/add-node.png)
+### Invalid DAG  ![Valid-DAG](./screenshots/invalid-dag.png)
+### Valid DAG  ![Invalid-DAG](./screenshots/valid-dag.png)
+### AutoLayout  ![AutoLayout](./screenshots/autolayout.png)
+### JSON preview  ![JSON-preview](./screenshots/json-preview.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **React** (Functional Components + Hooks)
+- **ReactFlow** for DAG rendering and manipulation
+- **Lucide React** for icons
+- **Custom Hooks** for DAG validation
+- **Plain CSS**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-  Add/Remove/Connect nodes interactively
+-  Undo/Redo and Auto Layout
+-  Real-time DAG Validation (Cycle detection, required structure check)
+-  **Export Pipeline as JSON** (click to download structure)
+-  JSON View panel for debugging
+-  Pointer cursor on buttons for better interaction
+-  MiniMap Support
+-  Node deletion enable multinade deletion(using ctrl+click)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to Run Locally
 
-### `npm run eject`
+```bash
+# Clone the repo
+git clone https://github.com/uday4002/pipeline-editor.git
+cd pipeline-editor
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Start dev server
+npm run dev    # or npm start
+```
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Export Feature
+After building your pipeline:
+- Click “Export as JSON”
+- A .json file downloads containing all nodes and edges
+- You can re-use this for loading pipelines in the future
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Design Decisions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **ReactFlow** for visual customization
+- **DFS-based cycle detection** for real-time pipeline validation
+- **UI Enhancements**:
+  - Blue-colored handles and edges for visual clarity
+  - Pointer cursor styling for all clickable elements
+  - Export button to download DAG structure as JSON
+- **Delete Feature**: Enabled node/edge removal via `Delete` key for quick edits
+- **Validation Panel**: Dynamic panel displays feedback (e.g., cycle detected, structure valid/invalid)
+- **MiniMap Integration**: Helps visualize and navigate large graphs
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Challenges Faced
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Keeping DAG validation real-time yet performant
+- Handling all cases for valid DAG
+- Styling ReactFlow handles & edges dynamically
+- Cursor override conflicts with default styles
+- UX around saving pipeline state without a backend
