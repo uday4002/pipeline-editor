@@ -139,6 +139,19 @@ function App() {
     },100)
   },[nodes, edges, setNodes, setEdges, reactFlowInstance])
 
+
+  const download = () => {
+    const dagStructure = {
+      nodes: nodes.map(n => ({ id: n.id, label: n.data.label})),
+      edges: edges.map(e => ({ source: e.source, target: e.target })),
+    };
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dagStructure, null, 2))
+    const dlAnchorElem = document.createElement('a')
+    dlAnchorElem.setAttribute("href", dataStr)
+    dlAnchorElem.setAttribute("download", "pipeline.json")
+    dlAnchorElem.click()
+  }
+
   return (
     <div className="App">
       {/* Wrap reactflow components using ReacFlowProvider */}
@@ -173,6 +186,7 @@ function App() {
           <div className="popup-wrapper">
             <button className="btn json-preview" onClick={() => setShowJsonPreview(prev => !prev)}>JSON Preview</button>
             {showJsonPreview && <JsonPreviewPanel nodes={nodes} edges={edges} />}
+            <button className="expot-json-button" onClick={download}>Export as Json</button>
           </div>
           <ValidationPanel 
             validation={validation}
