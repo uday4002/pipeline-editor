@@ -1,0 +1,84 @@
+.validation-panel{
+    max-width: 280px;
+    min-height: 120px;
+    background-color: rgb(239, 238, 238);
+    backdrop-filter: blur(8px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.panel-header{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.icon.success{
+    color: green;
+    font-size: 18px;
+}
+
+.icon.error{
+    color: red;
+    font-size: 18px;
+}
+
+.panel-info{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.icon.info{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.panel-section{
+    margin-bottom: 12px;
+}
+
+.section-title{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.section-title.error{
+    color: #c0392b;
+}
+
+.section-title.warning{
+    color: #e67e22;
+}
+
+.panel-section ul{
+    padding-left: 18px;
+    margin: 0;
+}
+
+.panel-section li{
+    margin-bottom: 4px;
+    color: #333;
+    text-align: left;
+}
+
+.valid-message{
+    color: green;
+    font-weight: 500;
+    margin-top: 6px;
+}

@@ -1,0 +1,23 @@
+.custom-node{
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 20px;
+    min-width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.selected{
+    border-color: #3b82f6;
+}
+
+.custom-node:hover{
+    border-color: #7fabf2;
+}

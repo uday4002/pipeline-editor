@@ -1,0 +1,120 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.pipeline-editor-header-container{
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #202021;
+    background-color: #e8ebebcf;
+}
+
+.pipeline-editor-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner-heading{
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.banner-tag-line{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #1F2937;
+}
+
+.control-panel{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    font-size: 18px;
+    background-color: #111827;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn.outline{
+    background-color: white;
+    color: #111827;
+    border: 1px solid #1F2937;
+}
+
+.btn.info{
+    padding: 6px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.info-wrapper{
+    position: relative;
+}
+
+.info-tooltip{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 260px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 13px;
+    color: #333;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.info-tooltip strong{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.info-tooltip ul{
+    margin-top: 6px;
+    padding-left: 18px;
+}
+
+.info-tooltip li{
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.info-tooltip kbd{
+    background: #f3f3f3;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
